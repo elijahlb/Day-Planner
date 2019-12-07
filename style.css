@@ -1,0 +1,52 @@
+body {
+    background-image:url(lines.jpg);
+}
+
+.jumbotron {
+    color:white;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom:5px solid white;
+}
+
+.row-border {
+    border-bottom: .5px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: .5px solid black;
+ }
+
+ .time {
+    background-color:#6C91C2;
+    border-left: 5px solid white;
+ }
+
+ p {
+    font-family: 'Play', sans-serif;
+    font-size:150%;
+    text-align:center;
+  
+    color:white;
+ }
+
+ .add-text {
+    background-color:#8B8982;
+
+ }
+
+ .save {
+    background-color:#6C91C2;
+    border-right: 5px solid white;
+ }
+
+ .save-button {
+     background-color:#6C91C2;
+     border-style: none;
+     font-size:200%;
+     color:white;
+ }
+
+ footer {
+     margin-top:30px;
+     border-top:2px white solid;
+ }
+
