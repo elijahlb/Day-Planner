@@ -8,6 +8,14 @@ body {
     border-bottom:5px solid white;
 }
 
+#date {
+    color:white;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    font-size: 100%;
+    margin-top: 20px;
+}
+
 .row-border {
     border-bottom: .5px solid black;
     border-right: 1px solid black;
@@ -19,6 +27,13 @@ body {
     background-color:#6C91C2;
     border-left: 5px solid white;
  }
+
+
+
+.text {
+    border:none;
+    width:100%;
+}
 
  p {
     font-family: 'Play', sans-serif;
@@ -48,5 +63,20 @@ body {
  footer {
      margin-top:30px;
      border-top:2px white solid;
+ }
+
+
+
+.current-time {
+    background-color:red;
+}
+ .time-left {
+     background-color:green;
+ }
+ .no-time {
+    background-color:#6C91C2;
+ }
+ .passed-time {
+    background-color:#8B8982;
  }
 
