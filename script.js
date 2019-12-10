@@ -2,39 +2,6 @@ $(document).ready(function() {
     $("#date").append(moment().format('MMMM Do YYYY'))
     
 
-    /*var currentTime = moment(currentTime).format("hh:mm:ss")*/
-
-    var currentTime = moment('09:20:00');
-    
-    var before9 = moment('09:00:01')
-    var after9 = moment('10:00:00')
-    
-    var before10 = moment('10:00:01')
-    var after10 = moment('11:00:00')
-
-    var before11 = moment('11:00:01')
-    var after11 = moment('12:00:00')
-
-    var before12 = moment('12:00:01')
-    var after12 = moment('13:00:00')
-
-    var before13 = moment('13:00:01')
-    var after13 = moment('14:00:00')
-
-    var before14 = moment('14:00:01')
-    var after14 = moment('15:00:00')
-
-    var before15 = moment('15:00:01')
-    var after15 = moment('16:00:00')
-
-    var before16 = moment('16:00:01')
-    var after16 = moment('17:00:00')
-
-    var before17 = moment('17:00:01')
-    var after17 = moment('18:00:00')
-
-    var timeArr = $(".time").toArray();
-
     // LOADS SAVED VALUES ---------------------------------------------------------
     var textSaved1 = localStorage.getItem("text-saved1")
     $("#formControlTextarea1").text(textSaved1)
@@ -56,85 +23,84 @@ $(document).ready(function() {
     $("#formControlTextarea9").text(textSaved9)
     // ---------------------------------------------------------------------------
 
+var timeArr = $(".time").toArray();
+
+        var oldTime = moment().format('LT')
+        var updatedTime = oldTime.split()
+        var newerTime = JSON.stringify(updatedTime)
+        console.log(newerTime)
+        console.log(newerTime[2]+newerTime[3])
 
 
-        if (currentTime > before9 || currentTime < after9) {
-            var newColor9 = timeArr.slice(1, 9);
-            var currentTime9 = timeArr[0];
-            $(newColor9).addClass("time-left")
-            $(currentTime9).addClass("current-time")
+        
+    //---------------CONDITIONS FOR TIME BLOCK CHANGES----------------------------
+            if (newerTime[2] == 9) {
+                var newColor9 = timeArr.slice(1, 9);
+                var currentTime9 = timeArr[0];
+                $(newColor9).addClass("time-left")
+                $(currentTime9).addClass("current-time")
+        } else if (newerTime[2] + newerTime[3] == 10) {
+                var past10 = timeArr.slice(0,0)
+                var newColor10 = timeArr.slice(2, 9);
+                var currentTime10 = timeArr[1];
+                $(newColor10).addClass("time-left")
+                $(currentTime10).addClass("current-time")
+                $(past10).addClass("passed-time")
+        } else if (newerTime[2] + newerTime[3] == 11) {
+                var past11 = timeArr.slice(0,2)
+                var newColor10 = timeArr.slice(3, 9);
+                var currentTime11 = timeArr[2];
+                $(newColor10).addClass("time-left")
+                $(currentTime11).addClass("current-time")
+                $(past11).addClass("passed-time")
+        } else if (newerTime[2] + newerTime[3] == 12) {
+                var past12 = timeArr.slice(0,3)
+                var newColor10 = timeArr.slice(4, 9);
+                var currentTime12 = timeArr[3];
+                $(newColor10).addClass("time-left")
+                $(currentTime12).addClass("current-time")
+                $(past12).addClass("passed-time")
+        } else if (newerTime[2] == 1) {
+                var past13 = timeArr.slice(0,4)
+                var newColor13 = timeArr.slice(5, 9);
+                var currentTime13 = timeArr[4];
+                $(newColor13).addClass("time-left")
+                $(currentTime13).addClass("current-time")
+                $(past13).addClass("passed-time")
+        } else if (newerTime[2] == 2) {      
+                var past14 = timeArr.slice(0,5)
+                var newColor14 = timeArr.slice(6, 9);
+                var currentTime14 = timeArr[5];
+                $(newColor14).addClass("time-left")
+                $(currentTime14).addClass("current-time")
+                $(past14).addClass("passed-time")
+        } else if (newerTime[2] == 3) {
+                var past15 = timeArr.slice(0,6)
+                var newColor15 = timeArr.slice(7, 9);
+                var currentTime15 = timeArr[6];
+                $(newColor15).addClass("time-left")
+                $(currentTime15).addClass("current-time")
+                $(past15).addClass("passed-time")
+        } else if (newerTime[2] == 4) {
+                var past16 = timeArr.slice(0,7)
+                var newColor16 = timeArr.slice(8, 9);
+                var currentTime16 = timeArr[7];
+                $(newColor16).addClass("time-left")
+                $(currentTime16).addClass("current-time")
+                $(past16).addClass("passed-time")
+        } else if (newerTime[2] == 5) {
+                var past17 = timeArr.slice(0,8)
+                var newColor17 = timeArr[0]
+                var currentTime17 = timeArr[8];
+                $(newColor17).addClass("time-left")
+                $(currentTime17).addClass("current-time")
+                $(past17).addClass("passed-time")
+} 
+    
 
-        } else if (currentTime > before10 || currentTime < after10) {
-            var past10 = timeArr.slice(0,0)
-            var newColor10 = timeArr.slice(2, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past10).addClass("passed-time")
 
-        } else if (currentTime > before11 || currentTime < after11) {
-            var past11 = timeArr.slice(0,1)
-            var newColor10 = timeArr.slice(3, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past11).addClass("passed-time")
-            
-        }else if (currentTime > before12 || currentTime < after12) {
-            var past12 = timeArr.slice(0,2)
-            var newColor10 = timeArr.slice(4, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            console.log("true")
-            $(past12).addClass("passed-time")
-            
-            
-        }else if (currentTime > before13 || currentTime < after13) {
-            var past13 = timeArr.slice(0,3)
-            var newColor10 = timeArr.slice(5, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past13).addClass("passed-time")
-            
-        }else if (currentTime > before14 || currentTime < after14) {
-            var past14 = timeArr.slice(0,4)
-            var newColor10 = timeArr.slice(6, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past14).addClass("passed-time")
-            
-        }else if (currentTime > before15 || currentTime < after15) {
-            var past15 = timeArr.slice(0,5)
-            var newColor10 = timeArr.slice(7, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past15).addClass("passed-time")
-            
-        }else if (currentTime > before16 || currentTime < after16) {
-            var past16 = timeArr.slice(0,6)
-            var newColor10 = timeArr.slice(8, 9);
-            var currentTime10 = timeArr[1];
-            console.log(past16)
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past16).addClass("passed-time")
-            
-        }else if (currentTime > before17 || currentTime < after17) {
-            var past17 = timeArr.slice(0,7)
-            var newColor10 = timeArr.slice(9, 9);
-            var currentTime10 = timeArr[1];
-            $(newColor10).addClass("time-left")
-            $(currentTime10).addClass("current-time")
-            $(past17).addClass("passed-time")
-            
-        } else {
-            var noTime = timeArr.slice(0,9);
-            $(noTime).addClass("no-time");
-        }
+
+//----------------SAVES TEXT TO LOCAL STORAGE -------------------------------------
 
         $('#button1').on('click', function(){    
             var text = $("#formControlTextarea1").val();
