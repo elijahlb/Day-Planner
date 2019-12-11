@@ -1,6 +1,7 @@
 
 body {
-    background-image:url(../assets/lines.jpg);
+    background-image:url(../assets/pexels.jpg);
+    
 }
 
 .jumbotron {
@@ -19,7 +20,7 @@ body {
 
 .row-border {
     border-bottom: .5px solid black;
-    border-right: 1px solid black;
+    border-right: .5px solid black;
     border-left: 1px solid black;
     border-top: .5px solid black;
  }
@@ -58,6 +59,10 @@ body {
      color:white;
  }
 
+ .save-button:hover {
+     opacity:0.7;
+ }
+
  footer {
      margin-top:30px;
      border-top:2px white solid;
@@ -67,10 +72,10 @@ body {
 /*--------------- TIME COLOR CONTROLS -----------*/
 
 .current-time {
-    background-color:rgb(75, 8, 8);
+    background-color:rgb(105, 172, 228);
 }
  .time-left {
-     background-color:rgb(18, 82, 68);
+     background-color:rgb(247, 193, 252);
  }
  .passed-time {
     background-color:#8B8982;
