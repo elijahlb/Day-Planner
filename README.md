@@ -5,6 +5,10 @@
 #### By Elijah Broaddus
 ​
 ## Description
+
+<img width="1335" alt="Screen Shot 2020-01-15 at 11 42 54 PM" src="https://user-images.githubusercontent.com/50716060/72494097-d39a3980-37f0-11ea-8a26-352dd26e8526.png">
+
+
 This daily planner allows users to plan out their day by storing their to-do lists in blocks of time. 
 
 ##Features
